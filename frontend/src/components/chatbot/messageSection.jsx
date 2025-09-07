@@ -10,7 +10,7 @@ export default function MessageSection({ messages }) {
   useEffect(scrollToBottom, [messages]);
 
   return (
-    <div className="flex-1 mx-2 mt-2 overflow-y-auto bg-white rounded-md">
+    <section className="flex-1 mx-2 mt-2 overflow-y-auto bg-white rounded-md">
       {messages.length === 0 && (
         <div className="w-10/12 p-4 m-auto mt-12 text-gray-500 rounded-md bg-gray-50">
           No messages yet.
@@ -33,6 +33,6 @@ export default function MessageSection({ messages }) {
         );
       })}
       <div ref={messagesEndRef} />
-    </div>
+    </section>
   );
 }

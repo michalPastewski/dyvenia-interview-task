@@ -7,11 +7,11 @@
 }
 
 .bot_message {
-  @apply border-[#9484e3] justify-self-end
+  @apply border-[#9484e3] justify-self-end shadow-md
 }
 
 .user_message {
-  @apply border-gray-100 justify-self-start
+  @apply border-gray-300 justify-self-start
 }
 
 :root {

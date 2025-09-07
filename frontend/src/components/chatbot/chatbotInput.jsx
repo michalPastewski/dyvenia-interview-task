@@ -8,7 +8,7 @@ export default function ChatbotInput({
   activateButton,
 }) {
   return (
-    <div className="relative p-4">
+    <section className="relative p-4">
       <TextArea
         placeholder="Type your message..."
         radius="large"
@@ -47,6 +47,6 @@ export default function ChatbotInput({
           </IconButton>
         </Tooltip>
       )}
-    </div>
+    </section>
   );
 }
