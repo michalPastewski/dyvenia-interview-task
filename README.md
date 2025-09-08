@@ -24,7 +24,9 @@ git clone git@github.com:michalPastewski/dyvenia-interview-task.git
    - all this command to run server
    ```
    pip install -r requirements.txt.
-then
+   ```
+   then
+   ```
    uvicorn main:app --reload --host="0.0.0.0" --port=8000
    ```
 
