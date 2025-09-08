@@ -40,14 +40,12 @@ export default function CodeEditor() {
   };
 
   return (
-    <section className="flex flex-col flex-1 w-2/3 bg-white">
+    <section className="flex flex-col flex-1 w-2/3 h-full overflow-auto bg-white">
       <EditorHeader language={language} setLanguage={setLanguage} />
-      <section className="h-full m-2 overflow-scroll">
+      <section className="relative m-2 overflow-scroll h-2/3">
         <Editor initialLang={language} onChange={setCode} />
-      </section>
-      <section className="flex justify-end mr-4">
         <button
-          className="p-1 rounded-sm text-[#9484e3] hover:bg-[#13c0d1] hover:border-[#13c0d1] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#9484e3] disabled:bg-gray-400 disabled:cursor-not-allowed font-bold border border-[#9484e3] w-30 button_transition"
+          className="p-1 rounded-sm text-[#9484e3] hover:bg-[#13c0d1] hover:border-[#13c0d1] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#9484e3] disabled:bg-gray-400 disabled:cursor-not-allowed font-bold border border-[#9484e3] w-30 button_transition absolute right-2 bottom-2"
           onClick={handleRunCode}
           disabled={loading}>
           {loading ? 'Running...' : 'Run Code'}

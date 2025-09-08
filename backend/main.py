@@ -27,7 +27,7 @@ async def chat():
 @app.post("/execute")
 async def execute_code():
     # Mockowa odpowiedź dla wykonania kodu
-    return {"output": "Code executed."}
+    return {"output": "Your awesome code executed successfully. Yes this is output mock only."}
 
 if __name__ == "__main__":
     import uvicorn
