@@ -1,12 +1,50 @@
-# React + Vite
+# Interview Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a UI prototype for AI chatbot assistant.
 
-Currently, two official plugins are available:
+Project created using the following tools and libraries:
+- Vite - react
+- RadixUI
+- MirroCode
+- TailwildCSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run project:
 
-## Expanding the ESLint configuration
+1. Clone repo:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+git clone git@github.com:michalPastewski/dyvenia-interview-task.git
+```
+
+2. Start the backend to receive mocked responses from the server.
+   - from root of the project go to backend folder
+   ```
+   cd backend
+   ``` 
+   - all this command to run server
+   ```
+   uvicorn main:app --reload --host="0.0.0.0" --port=8000
+   ```
+
+3. Launch the application
+   - from root of the project go to the frontend file
+   ```
+   cd frontend
+   ```
+   - install dependencies and run the dev environment:
+   ```
+   npm install
+   npm run dev
+   ```
+4. Open teh application =>  http://localhost:5173/ 
+ 
+<br>
+<br>
+<br>
+
+>NOTE:
+>
+> In this project, I was guided by my personal sense of aesthetics and UI intuition. To emphasise certain elements (buttons, AI output), I used the colour scheme presented on the website www.dywenia.com to maintain stylistic consistency.
+>
+> I encourage you to test the functionality and
+also recommend checking out the application in offline mode. 
