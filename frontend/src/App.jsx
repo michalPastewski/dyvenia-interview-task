@@ -1,6 +1,6 @@
 import './App.css';
 import Chatbot from './components/chatbot/chatbot';
-import CodeEditor from './components/codeEditor';
+import CodeEditor from './components/codeEditor/codeEditor';
 import Footer from './components/footer';
 import Header from './components/header';
 
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <main className="flex flex-1 overflow-hidden rounded-b-md">
         <Chatbot />
-     
+        <CodeEditor />
       </main>
       <Footer />
     </div>

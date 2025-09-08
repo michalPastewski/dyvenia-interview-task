@@ -10,7 +10,7 @@ export default function MessageSection({ messages }) {
   useEffect(scrollToBottom, [messages]);
 
   return (
-    <section className="flex-1 mx-2 mt-2 overflow-y-auto bg-white rounded-md">
+    <section className="flex-1 mx-2 mt-2 overflow-y-auto rounded-md">
       {messages.length === 0 && (
         <div className="w-10/12 p-4 m-auto mt-12 text-gray-500 rounded-md bg-gray-50">
           No messages yet.
@@ -24,11 +24,11 @@ export default function MessageSection({ messages }) {
         return (
           <div
             key={index}
-            className={`w-10/12 m-2 mb-4 border rounded-md ${messageStyle}`}>
-            <p className="px-2 py-1 text-xs font-semibold text-left text-gray-400">
+            className={`w-7/12 m-2 mb-4 border rounded-md ${messageStyle} bg-white`}>
+            <p className="px-2 py-1 text-xs font-semibold text-gray-400">
               {message.name}:
             </p>
-            <p className="py-2 pb-2">{message.message}</p>
+            <p className="px-2 py-2 text-left">{message.message}</p>
           </div>
         );
       })}
