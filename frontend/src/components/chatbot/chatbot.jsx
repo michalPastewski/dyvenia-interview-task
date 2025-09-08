@@ -43,7 +43,9 @@ export default function Chatbot() {
 
   return (
     <aside className="flex flex-col border-r border-gray-200 w-80 bg-gray-50 min-w-1/3">
-      <h2 className='py-1 pl-4 font-semibold text-left border-b border-gray-300 '>AI Assistant</h2>
+      <h2 className="py-2 pl-4 font-semibold text-left border-b border-gray-300 p-l-4 h-[47px]">
+        AI Assistant
+      </h2>
       <MessageSection messages={messages} />
       <ChatbotInput
         value={inputValue}
