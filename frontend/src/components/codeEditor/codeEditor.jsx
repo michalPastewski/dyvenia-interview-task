@@ -1,4 +1,6 @@
+import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
+import { useApiStatus } from '../../context/apiStatus';
 import EditorHeader from './editorHeader';
 import Editor from './editorSection';
 import OutputSection from './outputSection';
@@ -8,8 +10,12 @@ export default function CodeEditor() {
   const [output, setOutput] = useState('Waiting for run code...');
   const [loading, setLoading] = useState(false);
   const [language, setLanguage] = useState('python');
+  const { isOnline } = useApiStatus();
 
   const handleRunCode = async () => {
+    if (!isOnline) {
+      return;
+    }
     setLoading(true);
     setOutput('Running code...');
 

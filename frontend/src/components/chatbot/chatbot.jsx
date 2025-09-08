@@ -1,12 +1,17 @@
 import { useState } from 'react';
+import { useApiStatus } from '../../context/apiStatus';
 import ChatbotInput from './chatbotInput';
 import MessageSection from './messageSection';
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const { isOnline } = useApiStatus();
 
   const handleSend = async () => {
+    if (!isOnline) {
+      return;
+    }
     if (inputValue.trim() === '') return;
 
     const userMessage = { name: 'user', message: inputValue };
